@@ -12,11 +12,19 @@ const BlogLayout = ({ children }) => {
             className="text-blue-400 hover:text-blue-100 transition duration-100"
             to={routes.home()}
           >
-            Redwood Blog
+            Project Apollo
           </Link>
         </h1>
         <nav>
           <ul className="relative flex items-center font-light">
+            <li>
+              <Link
+                className="py-2 px-4 hover:bg-blue-600 transition duration-100 rounded"
+                to={routes.customers()}
+              >
+                Customers
+              </Link>
+            </li>
             <li>
               <Link
                 className="py-2 px-4 hover:bg-blue-600 transition duration-100 rounded"

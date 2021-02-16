@@ -1,10 +1,10 @@
-import BlogPost from 'src/components/BlogPost'
+import Comment from 'src/components/Comment'
 
 export const QUERY = gql`
-  query BlogPostsQuery {
-    posts {
+  query CommentsQuery {
+    comments {
       id
-      title
+      name
       body
       createdAt
     }
@@ -17,12 +17,12 @@ export const Empty = () => <div>Empty</div>
 
 export const Failure = ({ error }) => <div>Error: {error.message}</div>
 
-export const Success = ({ posts }) => {
+export const Success = ({ comments }) => {
   return (
-    <div className="-mt-10">
-      {posts.map((post) => (
-        <div key={post.id} className="mt-10">
-          <BlogPost post={post} summary={true} />
+    <div className="-mt-8">
+      {comments.map((comment) => (
+        <div key={comment.id} className="mt-8">
+          <Comment comment={comment} />
         </div>
       ))}
     </div>
